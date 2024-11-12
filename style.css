@@ -1,0 +1,195 @@
+body {
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgb(2, 2, 86);
+}
+.stock-market{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.chart-section {
+    flex: 2;
+    padding: 20px;
+}
+
+.chart-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.list-section {
+    flex: 1;
+    color: white;
+}
+
+.list-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list-section li {
+    cursor: pointer;
+}
+
+.detail-section {
+    color: white;
+    flex: 1;
+    padding: 20px;
+}
+
+#profit {
+    font-weight: bold;
+}
+
+#profit.green {
+    color: green;
+}
+
+#profit.red {
+    color: red;
+}
+
+.detail-text{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.detail-text > h3, p {
+    margin-left: 2rem;
+}
+
+.btn-text, .btn{
+outline: none;
+border: none;
+    background-color: rgb(18, 18, 228);
+    color: white;
+    border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Reduce padding on mobile */
+    }
+
+    .container {
+        flex-direction: column; /* Stack sections vertically on mobile */
+        height: auto; /* Allow content to flow naturally */
+    }
+
+    .chart-section,
+    .list-section,
+    .detail-section {
+        flex: 1 0 auto; /* Allow these sections to grow or shrink based on content */
+        padding: 15px;
+        width: 100%; /* Ensure they take up full width */
+    }
+
+    .chart-buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    button {
+        margin: 5px;
+        padding: 8px 15px; /* Adjust padding for smaller screens */
+    }
+
+    .list-section {
+        margin-top: 20px; /* Add some space between the list and other sections */
+    }
+
+    .list-section li {
+        font-size: 14px; /* Smaller font size for stock items */
+        padding: 8px; /* Reduce padding for mobile */
+    }
+
+    .list-section li:hover {
+        background-color: rgba(255, 255, 255, 0.1); /* Keep hover effect */
+    }
+
+    /* Profit section */
+    #profit {
+        font-size: 1rem; /* Smaller font size for profit */
+    }
+
+    .detail-text {
+        flex-direction: column; /* Stack details vertically on mobile */
+        align-items: flex-start;
+    }
+
+    .detail-text > h3,
+    .detail-text > p {
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 10px; /* Add space between details */
+    }
+
+    /* Reduce padding on buttons */
+    .btn-text {
+        padding: 8px 16px;
+    }
+
+    /* Adjust font sizes for smaller devices */
+    .stock-market {
+        font-size: 1.5rem; /* Smaller font for title */
+    }
+}
+
+/* Media query for very small screens (e.g., portrait phones) */
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    .stock-market {
+        font-size: 1.3rem; /* Even smaller title font size */
+    }
+
+    .container {
+        padding: 10px; /* Reduce container padding on very small screens */
+    }
+
+    .chart-buttons button {
+        padding: 6px 12px; /* Smaller button sizes */
+        font-size: 12px; /* Smaller button font */
+    }
+
+    .list-section li {
+        font-size: 13px; /* Further reduce font size for stock list */
+    }
+
+    #profit {
+        font-size: 0.9rem; /* Smaller profit font size */
+    }
+
+    .detail-section {
+        padding: 10px; /* Less padding on very small screens */
+    }
+
+    .btn-text {
+        font-size: 14px; /* Smaller font for buttons */
+    }
+}

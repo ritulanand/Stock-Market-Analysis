@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <h1 class="stock-market">Stock Market Analysis</h1>
+    <div class="container">
+      <div class="chart-section">
+        <canvas id="myChart" style="height: 130px; width: 90px"></canvas>
+        <div class="chart-buttons">
+          <button id="1-month" class="btn">1 Month</button>
+          <button id="3-month" class="btn">3 Months</button>
+          <button id="1-year" class="btn">1 Year</button>
+          <button id="5-year" class="btn">5 Years</button>
+        </div>
+      </div>
+
+      <div class="list-section">
+        <ul id="stockList"></ul>
+      </div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-text">
+        <h3 id="stockName"></h3>
+        <p id="profit"></p>
+        <p id="bookValue"></p>
+      </div>
+
+      <p id="summary"></p>
+    </div>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="createChart.js"></script>
+  </body>
+</html>
